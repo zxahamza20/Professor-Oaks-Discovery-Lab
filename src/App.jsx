@@ -21,6 +21,7 @@ function App() {
       );
       const speciesData = await speciesResponse.json();
 
+
       setPokemon({
         pokemon: pokemonData,
         species: speciesData,
