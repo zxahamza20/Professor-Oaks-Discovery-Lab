@@ -8,19 +8,16 @@ function App() {
     const randomID = Math.floor(Math.random() * 1025) + 1;
 
     try {
-      // Fetch Pokémon data
       const pokemonResponse = await fetch(
         `https://pokeapi.co/api/v2/pokemon/${randomID}`
       );
       const pokemonData = await pokemonResponse.json();
 
-      // Fetch species data (for habitat)
       const speciesResponse = await fetch(
         `https://pokeapi.co/api/v2/pokemon-species/${randomID}`
       );
       const speciesData = await speciesResponse.json();
 
-      // Save both pieces of data together
       setPokemon({
         pokemon: pokemonData,
         species: speciesData,
