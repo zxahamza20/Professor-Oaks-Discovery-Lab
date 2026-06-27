@@ -38,3 +38,7 @@ button {
   padding: 20px;
   border-radius: 15px;
 }
+
+.pokemon-card img {
+  width: 220px;
+}
