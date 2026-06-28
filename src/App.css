@@ -185,3 +185,60 @@ button {
 .history-item-btn:active {
   transform: translateY(0);
 }
+
+.history-item-btn-minimal {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  position: relative; 
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.history-item-btn-minimal:hover {
+  transform: scale(1.15); 
+}
+
+.history-sprite-minimal {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+.history-tooltip {
+  display: none; 
+  position: absolute;
+  bottom: 85px; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e1e1e; 
+  color: #ffffff;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  padding: 12px;
+  width: 160px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10; 
+  pointer-events: none; 
+}
+
+.history-tooltip h4 {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: #3b82f6;
+  border-bottom: 1px solid #444;
+  padding-bottom: 4px;
+}
+
+.history-tooltip p {
+  margin: 4px 0;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.history-item-btn-minimal:hover .history-tooltip {
+  display: block;
+}
