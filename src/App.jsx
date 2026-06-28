@@ -7,6 +7,7 @@ import "./App.css";
 function App() {
   const [pokemon, setPokemon] = useState(null);
   const [banList, setBanList] = useState([]);
+  const [history, setHistory] = useState([]);
 
   const getPokemon = async () => {
     let keepLooking = true;
@@ -43,10 +44,14 @@ function App() {
           banList.includes(generation);
 
         if (!isBanned) {
-          setPokemon({
+          const newPokemon = {
             pokemon: pokemonData,
             species: speciesData,
-          });
+          };
+
+          setPokemon(newPokemon);
+          setHistory((prevHistory) => [newPokemon, ...prevHistory]);
+
           keepLooking = false; 
         } else {
           console.log(`⚠️ Skipped ${pokemonData.name.toUpperCase()} due to a banned attribute.`);
@@ -86,7 +91,7 @@ function App() {
         <BanList list={banList} onRemoveItem={handleRemoveFromBanList} />
       </div>
       
-      <History />
+      <History historyLog={history} />
     </div>
   );
 }

@@ -118,3 +118,47 @@ button {
   color: #777;
   font-style: italic;
 }
+
+.history {
+  margin-top: 40px;
+  background: #e6f0ff;
+  border: 2px solid #b3d1ff;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.history-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.history-item {
+  background: white;
+  border: 1px solid #ccd;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.history-sprite {
+  width: 70px;
+  height: 70px;
+}
+
+.history-name {
+  font-size: 11px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
