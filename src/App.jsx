@@ -91,11 +91,10 @@ function App() {
       <button onClick={getPokemon}>🔍 Discover Pokémon</button>
 
       <div className="main-layout">
+        <History historyLog={history} onHistoryItemClick={handleSelectPastPokemon} />
         <PokemonCard pokemon={pokemon} onAttributeClick={handleAddToBanList} />
         <BanList list={banList} onRemoveItem={handleRemoveFromBanList} />
       </div>
-
-      <History historyLog={history} onHistoryItemClick={handleSelectPastPokemon} />
     </div>
   );
 }
