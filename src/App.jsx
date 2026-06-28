@@ -6,6 +6,7 @@ import "./App.css";
 
 function App() {
   const [pokemon, setPokemon] = useState(null);
+  const [banList, setBanList] = useState([]);
 
   const getPokemon = async () => {
     const randomID = Math.floor(Math.random() * 1025) + 1;
@@ -31,6 +32,13 @@ function App() {
     }
   };
 
+  const handleAddToBanList = (attribute) => {
+    if (!banList.includes(attribute)) {
+      setBanList([...banList, attribute]);
+      console.log(`Added ${attribute} to the ban list:`); 
+    }
+  }
+
   return (
     <div className="app">
       <h1>🧪 Professor Oak's Discovery Lab</h1>
@@ -43,7 +51,7 @@ function App() {
         🔍 Discover Pokémon
       </button>
 
-      <PokemonCard pokemon={pokemon} />
+      <PokemonCard pokemon={pokemon} onAttributeClick={handleAddToBanList} />
 
       <BanList />
 
