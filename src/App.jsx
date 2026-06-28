@@ -35,9 +35,12 @@ function App() {
   const handleAddToBanList = (attribute) => {
     if (!banList.includes(attribute)) {
       setBanList([...banList, attribute]);
-      console.log(`Added ${attribute} to the ban list:`); 
     }
   }
+
+  const handleRemoveFromBanList = (attributeToRemove) => {
+    setBanList(banList.filter((item) => item !== attributeToRemove));
+  };
 
   return (
     <div className="app">
@@ -51,10 +54,12 @@ function App() {
         🔍 Discover Pokémon
       </button>
 
-      <PokemonCard pokemon={pokemon} onAttributeClick={handleAddToBanList} />
+      <div className="main-layout">
+        <PokemonCard pokemon={pokemon} onAttributeClick={handleAddToBanList} />
 
-      <BanList />
-
+        <BanList list={banList} onRemoveItem={handleRemoveFromBanList} />
+      </div>
+      
       <History />
     </div>
   );
