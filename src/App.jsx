@@ -78,6 +78,10 @@ function App() {
     setBanList(banList.filter((item) => item !== attributeToRemove));
   };
 
+  const handleSelectPastPokemon = (pastPokemon) => {
+    setPokemon(pastPokemon);
+  };
+
   return (
     <div className="app">
       <h1>🧪 Professor Oak's Discovery Lab</h1>
@@ -90,8 +94,8 @@ function App() {
         <PokemonCard pokemon={pokemon} onAttributeClick={handleAddToBanList} />
         <BanList list={banList} onRemoveItem={handleRemoveFromBanList} />
       </div>
-      
-      <History historyLog={history} />
+
+      <History historyLog={history} onHistoryItemClick={handleSelectPastPokemon} />
     </div>
   );
 }

@@ -162,3 +162,26 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.history-item-btn {
+  background: white;
+  border: 1px solid #ccd;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  margin-bottom: 0px; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.history-item-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6; 
+}
+
+.history-item-btn:active {
+  transform: translateY(0);
+}
