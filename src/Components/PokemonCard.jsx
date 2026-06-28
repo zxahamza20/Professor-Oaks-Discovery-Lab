@@ -1,3 +1,5 @@
+"./PokemonCard.css";
+
 function PokemonCard({ pokemon, onAttributeClick }) {
   if (!pokemon || !pokemon.species) {
     return (

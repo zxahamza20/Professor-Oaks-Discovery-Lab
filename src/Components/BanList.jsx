@@ -1,3 +1,5 @@
+import "./BanList.css";
+
 function BanList({ list, onRemoveItem }) {
   return (
     <div className="ban-list">

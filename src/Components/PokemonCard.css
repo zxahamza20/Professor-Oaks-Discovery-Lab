@@ -1,0 +1,26 @@
+.pokemon-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  min-height: 350px;
+  margin-bottom: 30px;
+}
+
+.pokemon-card img {
+  width: 220px;
+}
+
+.attr-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 14px;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.attr-btn:hover {
+  background-color: #ddd;
+}

@@ -1,3 +1,5 @@
+import "./history.css";
+
 function History({ historyLog, onHistoryItemClick }) {
   return (
     <div className="history">
