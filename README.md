@@ -56,6 +56,29 @@ GIF created with ...
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
+### Production Screenshots
+
+**Default state where no pokemon has been discovered**
+<img src='https://i.imgur.com/MtNLdxV.jpeg' title='Landing State' width='100%' alt='Landing State' />
+
+**No banned list, Many pokemon in the research log**
+<img src='https://i.imgur.com/IbQgEX7.jpeg' title='No banned list, research yes' width='100%' alt='No banned list, research yes' />
+
+**Preview of tool tip (hovering over a pokemon in research log shows its stats)**
+<img src='https://i.imgur.com/wKwv9RP.jpeg' title='Tool tip preview' width='100%' alt='Tool tip preview' />
+
+**Clicking on a pokemon in research log brings it back as the pokemon card**
+<img src='https://i.imgur.com/8oHWbrs.png' title='Reversion of addition to research log' width='100%' alt='Reversion of addition to research log' />
+
+**Adding the attributes to ban list**
+<img src='https://i.imgur.com/4Soq7lJ.png' title='Ban list' width='100%' alt='Ban list' />
+
+**Clicking on an attribute in the ban list removes it from there**
+<img src='https://i.imgur.com/EfmNvR9.png' title='Banned attributes removal' width='100%' alt='Banned attributes removal' />
+
+**Banning too many attributes causes timeout**
+<img src='https://i.imgur.com/z5wQLT7.png' title='Timeout modal' width='100%' alt='Timeout modal' />
+
 ## Notes
 
 1. The biggest challenge was finding an API with a large enough dataset, as to avoid the repitition. There were some sample APIs given in the project description but I wanted to use my own so the search took a long time.
