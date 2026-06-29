@@ -45,11 +45,12 @@ body::before {
 }
 
 .app > p {
+  font-family: 'Fredoka', Arial, sans-serif;
   color: #ffffff;
   margin: 0 auto 22px auto; 
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   max-width: fit-content; 
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 button {
