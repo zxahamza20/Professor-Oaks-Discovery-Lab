@@ -51,9 +51,6 @@ body::before {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Generic buttons default to the big yellow "Discover" CTA.
-   Component-specific buttons (.attr-btn, .ban-badge, etc.) override
-   this further down the cascade via their own classes. */
 button {
   padding: 13px 26px;
   font-size: 18px;
@@ -92,6 +89,13 @@ button:focus-visible {
   align-items: stretch;
   margin: 10px auto 0;
   max-width: 1200px;
+  height: 620px; /* Fixed height to keep everything aligned */
+}
+
+.main-layout > * {
+  flex: 1;
+  min-height: 0;
+  height: 100%; /* Make children fill the parent height */
 }
 
 .empty-msg {
@@ -103,5 +107,12 @@ button:focus-visible {
   .main-layout {
     flex-direction: column;
     align-items: center;
+    height: auto; /* Allow stacking on mobile */
+  }
+  
+  .main-layout > * {
+    height: auto;
+    min-height: 400px;
+    width: 100%;
   }
 }
