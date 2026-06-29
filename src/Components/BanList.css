@@ -1,46 +1,98 @@
 .ban-list {
-  background-color: #1e1e1e;
-  border: 2px dashed #ff4d4d;
-  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  background: linear-gradient(180deg, #1e1e1e 0%, #141414 100%);
+  border: 4px solid #ee1515;
+  border-radius: 16px;
   padding: 20px;
-  min-width: 250px;
-  max-width: 320px;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.ban-list-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.pokeball-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ee1515 0% 48%, #1e1e1e 48% 52%, #f5f5f5 52% 100%);
+  border: 2px solid #1e1e1e;
+  box-shadow: 0 0 0 2px #fff inset;
+}
+
+.ban-list h3 {
+  font-family: 'Fredoka', Arial, sans-serif;
+  margin: 0;
+  font-size: 19px;
 }
 
 .ban-list-subtitle {
   font-size: 12px;
   color: #aaa;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  line-height: 1.4;
 }
 
 .ban-badges-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
+  align-content: flex-start;
+  flex-grow: 1;
 }
 
 .ban-badge {
-  background-color: #ff4d4d;
+  background-color: #ee1515;
   color: white;
   border: none;
   border-radius: 20px;
-  padding: 6px 14px;
+  padding: 7px 16px;
   font-size: 14px;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 6px;
+  text-transform: capitalize;
   transition: transform 0.1s ease, background-color 0.2s ease;
 }
 
 .ban-badge:hover {
-  background-color: #ff3333;
+  background-color: #c80000;
   transform: scale(1.05);
+}
+
+.ban-badge:focus-visible {
+  outline: 3px solid #4fc3f7;
+  outline-offset: 2px;
 }
 
 .remove-x {
   font-weight: normal;
   color: #ffe0e0;
+}
+
+.ban-list .empty-msg {
+  color: #888;
+  flex-grow: 1;
+}
+
+@media (max-width: 480px) {
+  .ban-list {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
 }

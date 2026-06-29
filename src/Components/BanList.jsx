@@ -3,10 +3,13 @@ import "./BanList.css";
 function BanList({ list, onRemoveItem }) {
   return (
     <div className="ban-list">
-      <h3>🚫 Containment Zones (Ban List)</h3>
+      <div className="ban-list-header">
+        <span className="pokeball-icon" aria-hidden="true"></span>
+        <h3>Containment Zone</h3>
+      </div>
 
       <p className="ban-list-subtitle">
-        Click an attribute to unban and discovver more of the type!
+        Click a badge to release it back into the wild.
       </p>
 
       {list.length === 0 ? (

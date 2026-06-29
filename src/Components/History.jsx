@@ -1,13 +1,13 @@
-import "./history.css";
+import "./History.css";
 
 function History({ historyLog, onHistoryItemClick }) {
   return (
     <div className="history">
-      <h3>📜 Research Log (History)</h3>
-      <p className="ban-list-subtitle" style={{ color: '#555' }}>
-        Hover over a Pokémon to view its attributes, and click to restore it!
+      <h3>📜 Research Log</h3>
+      <p className="history-subtitle">
+        Hover to inspect, click to recall a past discovery.
       </p>
-      
+
       {!historyLog || historyLog.length === 0 ? (
         <p className="empty-msg">No Pokémon have been discovered in this session yet.</p>
       ) : (
@@ -20,14 +20,14 @@ function History({ historyLog, onHistoryItemClick }) {
             const habitat = item.species?.habitat ? item.species.habitat.name : "Unknown";
 
             return (
-              <button 
-                key={index} 
+              <button
+                key={index}
                 className="history-item-btn-minimal"
                 onClick={() => onHistoryItemClick(item)}
                 title={`Review ${name?.toUpperCase()}`}
               >
                 {sprite && <img src={sprite} alt={name} className="history-sprite-minimal" />}
-                
+
                 <div className="history-tooltip">
                   <h4>{name?.toUpperCase()}</h4>
                   <p><strong>🔥 Type:</strong> {type}</p>
