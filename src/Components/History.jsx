@@ -62,7 +62,6 @@ function History({ historyLog, onHistoryItemClick }) {
         </div>
       )}
 
-      {/* Fixed-position tooltip that follows mouse */}
       {hoveredItem && (
         <div
           className="history-tooltip-fixed"

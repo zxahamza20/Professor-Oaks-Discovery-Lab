@@ -45,10 +45,11 @@ body::before {
 }
 
 .app > p {
-  color: #e2e2e2;
-  margin-top: 0;
-  margin-bottom: 22px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  margin: 0 auto 22px auto; 
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  max-width: fit-content; 
+  font-size: 1.2em;
 }
 
 button {
@@ -89,13 +90,13 @@ button:focus-visible {
   align-items: stretch;
   margin: 10px auto 0;
   max-width: 1200px;
-  height: 620px; /* Fixed height to keep everything aligned */
+  height: 670px; 
 }
 
 .main-layout > * {
   flex: 1;
   min-height: 0;
-  height: 100%; /* Make children fill the parent height */
+  height: 100%; 
 }
 
 .empty-msg {
@@ -107,7 +108,7 @@ button:focus-visible {
   .main-layout {
     flex-direction: column;
     align-items: center;
-    height: auto; /* Allow stacking on mobile */
+    height: auto; 
   }
   
   .main-layout > * {

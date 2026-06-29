@@ -1,7 +1,5 @@
 import "./PokemonCard.css";
 
-// Official-ish type colors, used as the card's accent (border, art-frame glow,
-// attribute buttons) so every card reads like its own TCG "energy" color.
 const TYPE_COLORS = {
   normal: "#A8A878",
   fire: "#F08030",
