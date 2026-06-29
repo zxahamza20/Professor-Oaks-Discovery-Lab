@@ -44,13 +44,13 @@ body::before {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-.app > p {
+.subtitle-wrapper p {
   font-family: 'Fredoka', Arial, sans-serif;
   color: #ffffff;
   margin: 0 auto 22px auto; 
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
   max-width: fit-content; 
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
 button {
