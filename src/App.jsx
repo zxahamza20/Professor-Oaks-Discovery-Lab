@@ -1,6 +1,7 @@
 import PokemonCard from "./components/PokemonCard";
 import BanList from "./components/BanList";
 import History from "./components/History";
+import TimeoutModal from "./components/TimeoutModal";
 import { useState } from "react";
 import "./App.css";
 
@@ -8,6 +9,7 @@ function App() {
   const [pokemon, setPokemon] = useState(null);
   const [banList, setBanList] = useState([]);
   const [history, setHistory] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   const getPokemon = async () => {
     let keepLooking = true;
@@ -64,7 +66,7 @@ function App() {
     }
 
     if (attempts >= maxAttempts) {
-      alert("❌ Professor Oak's search timed out! You've banned too many attributes to find a match quickly. Try unbanning a few traits.");
+      setShowModal(true);
     }
   };
 
@@ -86,7 +88,9 @@ function App() {
     <div className="app">
       <h1>🧪 Professor Oak's Discovery Lab</h1>
 
-      <p>Help Professor Oak catalog Pokémon from every region!</p>
+      <div className="subtitle-wrapper">
+        <p>Help Professor Oak catalog Pokémon from every region!</p>
+      </div>
 
       <button onClick={getPokemon}>🔍 Discover Pokémon</button>
 
@@ -95,6 +99,8 @@ function App() {
         <PokemonCard pokemon={pokemon} onAttributeClick={handleAddToBanList} />
         <BanList list={banList} onRemoveItem={handleRemoveFromBanList} />
       </div>
+
+      {showModal && <TimeoutModal onClose={() => setShowModal(false)} />}
     </div>
   );
 }
